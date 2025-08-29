@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>RK Tutorials — Master SAP HANA</title>
+  <meta name="description" content="Master SAP HANA Modelling & SQL Scripting with RK Tutorials. 45-day online hands‑on training with projects, interview prep, and post‑training assistance." />
+  <!-- Open Graph for rich previews -->
+  <meta property="og:title" content="Master SAP HANA with RK Tutorials" />
+  <meta property="og:description" content="45‑day online hands‑on SAP HANA training with projects and interview prep." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="images/hero.jpg" />
+  <meta name="format-detection" content="telephone=yes" />
+  <style>
+    :root {
+      --brand: #f26a21;       /* orange */
+      --brand-dark: #0b2f4c;  /* navy */
+      --accent: #f9c30a;      /* yellow */
+      --text: #1f2937;        /* slate-800 */
+      --muted: #4b5563;       /* slate-600 */
+      --bg: #f8fafc;          /* slate-50 */
+      --card: #ffffff;
+      --ok: #16a34a;          /* green */
+    }
+    * { box-sizing: border-box; }
+    body { margin: 0; font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif; color: var(--text); background: var(--bg); }
+    a { color: inherit; text-decoration: none; }
+
+    /* Header */
+    .nav {
+      position: sticky; top: 0; z-index: 50;
+      background: #ffffffcc; backdrop-filter: saturate(1.2) blur(6px);
+      border-bottom: 1px solid #e5e7eb;
+    }
+    .nav-inner { max-width: 1100px; margin: 0 auto; padding: 14px 20px; display: flex; align-items: center; justify-content: space-between; }
+    .brand { display: flex; align-items: center; gap: 10px; font-weight: 800; letter-spacing: 0.2px; }
+    .brand-logo { width: 40px; height: 40px; border-radius: 10px; background: var(--accent); display: grid; place-items: center; color: var(--brand-dark); font-weight: 900; }
+    .cta { display: flex; gap: 10px; flex-wrap: wrap; }
+    .btn { padding: 10px 14px; border-radius: 999px; border: 1px solid #e5e7eb; background: #fff; font-weight: 600; }
+    .btn.primary { background: var(--brand); color: #fff; border-color: var(--brand); }
+
+    /* Hero */
+    .hero { background: linear-gradient(135deg, var(--brand) 0%, var(--brand-dark) 70%); color: #fff; }
+    .hero-inner { max-width: 1100px; margin: 0 auto; padding: 56px 20px; display: grid; grid-template-columns: 1.1fr 1fr; gap: 32px; align-items: center; }
+    .hero h1 { margin: 0 0 12px; font-size: clamp(28px, 4vw, 46px); line-height: 1.1; }
+    .hero p { margin: 0 0 22px; font-size: clamp(16px, 2vw, 18px); opacity: 0.95; }
+    .hero .actions { display: flex; gap: 12px; flex-wrap: wrap; }
+    .badge { display: inline-block; background: #ffffff22; border: 1px solid #ffffff55; padding: 6px 10px; border-radius: 999px; font-weight: 600; margin-bottom: 12px; }
+    .hero img { width: 100%; height: auto; border-radius: 16px; box-shadow: 0 20px 50px rgba(0,0,0,.25); border: 8px solid #ffffff20; }
+
+    /* Sections */
+    section { padding: 56px 20px; }
+    .container { max-width: 1100px; margin: 0 auto; }
+    .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px; }
+    .card { background: var(--card); border: 1px solid #e5e7eb; border-radius: 16px; padding: 18px 18px; box-shadow: 0 6px 16px rgba(2,6,23,0.04); }
+    h2 { margin: 0 0 14px; font-size: clamp(22px, 3vw, 30px); }
+    .list { list-style: none; padding: 0; margin: 0; display: grid; gap: 10px; }
+    .list li { display: grid; grid-template-columns: 22px 1fr; align-items: start; gap: 10px; }
+    .check { width: 22px; height: 22px; background: var(--ok); color: #fff; border-radius: 999px; display: grid; place-items: center; font-size: 14px; line-height: 1; }
+    .muted { color: var(--muted); }
+
+    /* Contact */
+    .contact { text-align: center; }
+    .contact .stack { display: flex; gap: 12px; flex-wrap: wrap; justify-content: center; margin-top: 12px; }
+
+    /* Footer */
+    footer { padding: 24px 20px 40px; text-align: center; color: var(--muted); }
+
+    @media (max-width: 860px) {
+      .hero-inner { grid-template-columns: 1fr; padding: 40px 20px; }
+    }
+  </style>
+</head>
+<body>
+  <!-- Top Nav -->
+  <header class="nav">
+    <div class="nav-inner">
+      <div class="brand">
+        <div class="brand-logo">RK</div>
+        <div>
+          <div>RK Tutorials</div>
+          <small class="muted">SAP HANA Training</small>
+        </div>
+      </div>
+      <div class="cta">
+        <a class="btn" href="#contact">Contact</a>
+        <a class="btn primary" href="https://wa.me/916305861539" target="_blank" rel="noopener">WhatsApp</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-inner">
+      <div>
+        <span class="badge">Online · 45‑Day Hands‑On Program</span>
+        <h1>Master SAP HANA with <span style="color:var(--accent)">RK Tutorials</span></h1>
+        <p>Looking to excel in SAP Native HANA Modelling and SQL Scripting? Our online hands‑on training equips you with real‑world expertise to ace your next interview.</p>
+        <div class="actions">
+          <a class="btn primary" href="mailto:rktutorialssap@gmail.com?subject=SAP%20HANA%20Training%20Enquiry">Email Us</a>
+          <a class="btn" href="tel:+916305861539">Call</a>
+          <a class="btn" href="#learn">What you'll learn</a>
+        </div>
+      </div>
+      <div>
+        <img src="images/hero.jpg" alt="RK Tutorials SAP HANA training poster" />
+      </div>
+    </div>
+  </section>
+
+  <!-- What You'll Learn -->
+  <section id="learn">
+    <div class="container">
+      <h2>What You’ll Learn</h2>
+      <div class="cards">
+        <div class="card">
+          <ul class="list">
+            <li><span class="check">✓</span><span>SAP HANA Modelling & SQL Scripting</span></li>
+            <li><span class="check">✓</span><span>Practical hands‑on activities + access to SAP HANA DB</span></li>
+            <li><span class="check">✓</span><span>Main project at the end of the course for real‑time experience</span></li>
+            <li><span class="check">✓</span><span>Interview preparation & mock interviews</span></li>
+            <li><span class="check">✓</span><span>Resume building support</span></li>
+            <li><span class="check">✓</span><span>Post‑training interview assistance <small class="muted">(T&C apply)</small></span></li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3 style="margin-top:0">Course Details</h3>
+          <p style="margin: 8px 0">Mode: <strong>Online</strong></p>
+          <p class="muted" style="margin: 8px 0">Limited slots available — secure your spot today!</p>
+          <div class="stack" style="display:flex; gap:8px; flex-wrap:wrap; margin-top:6px">
+            <span class="badge" style="background:#e5fbea; color:#065f46; border-color:#bbf7d0">Hands‑On</span>
+            <span class="badge" style="background:#eef2ff; color:#3730a3; border-color:#c7d2fe">Real‑World Project</span>
+            <span class="badge" style="background:#fff7ed; color:#9a3412; border-color:#fed7aa">Interview Prep</span>
+          </div>
+        </div>
+        <div class="card">
+          <h3 style="margin-top:0">About the Tutor</h3>
+          <ul class="list">
+            <li><span class="check">✓</span><span>11+ years of IT experience</span></li>
+            <li><span class="check">✓</span><span>3+ years of teaching experience</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="contact">
+    <div class="container">
+      <h2>Contact Us</h2>
+      <p class="muted">Have questions or want to enroll? Reach out now.</p>
+      <div class="stack">
+        <a class="btn primary" href="https://wa.me/916305861539" target="_blank" rel="noopener">WhatsApp</a>
+        <a class="btn" href="mailto:rktutorialssap@gmail.com?subject=SAP%20HANA%20Training%20Enquiry">rktutorialssap@gmail.com</a>
+        <a class="btn" href="tel:+916305861539">+91 63058 61539</a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    © <span id="y"></span> RK Tutorials. All rights reserved.
+  </footer>
+
+  <script>
+    // Set current year in footer
+    document.getElementById('y').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
